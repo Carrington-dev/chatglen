@@ -1,0 +1,6 @@
+django 
+djangorestframework 
+channels 
+uvicorn
+channels[daphne]
+channels_redis
