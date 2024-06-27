@@ -4,3 +4,4 @@ channels
 uvicorn
 channels[daphne]
 channels_redis
+selenium

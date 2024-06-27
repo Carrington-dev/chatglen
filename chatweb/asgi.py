@@ -3,7 +3,7 @@ import os
 from channels.routing import ProtocolTypeRouter
 from django.core.asgi import get_asgi_application
 from chatty.routing import websocket_urlpatterns
-
+from channels.layers import get_channel_layer
 from channels.auth import AuthMiddlewareStack
 from channels.routing import ProtocolTypeRouter, URLRouter
 from channels.security.websocket import AllowedHostsOriginValidator
@@ -23,3 +23,5 @@ application = ProtocolTypeRouter({
             AuthMiddlewareStack(URLRouter(websocket_urlpatterns))
         ),
 })
+
+channel_layer = get_channel_layer()
